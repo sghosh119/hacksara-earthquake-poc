@@ -1,0 +1,19 @@
+{
+  "earthquake_info": {
+    "id": null,
+    "magnitude": 6.9,
+    "place": "Macquarie Island region",
+    "time": "2025-07-28T15:10:35.059000",
+    "depth": 31,
+    "longitude": 157.1018,
+    "latitude": -57.6081
+  },
+  "imu_data_info": {
+    "duration_seconds": 10.0,
+    "sample_rate": 104,
+    "estimated_pga": 0.05800000000000001,
+    "total_samples": 1040
+  },
+  "category": "big",
+  "detection_threshold": 5.1
+}

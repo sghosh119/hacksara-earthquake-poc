@@ -1,0 +1,19 @@
+{
+  "earthquake_info": {
+    "id": null,
+    "magnitude": 4.4,
+    "place": "292 km E of Levuka, Fiji",
+    "time": "2025-08-05T12:31:04.474000",
+    "depth": 531.257,
+    "longitude": -177.9345,
+    "latitude": -18.3187
+  },
+  "imu_data_info": {
+    "duration_seconds": 10.0,
+    "sample_rate": 104,
+    "estimated_pga": 0.01,
+    "total_samples": 1040
+  },
+  "category": "small",
+  "detection_threshold": 4.0
+}

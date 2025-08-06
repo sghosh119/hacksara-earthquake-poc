@@ -1,0 +1,19 @@
+{
+  "earthquake_info": {
+    "id": null,
+    "magnitude": 6.8,
+    "place": "118 km E of Severo-Kuril\u2019sk, Russia",
+    "time": "2025-08-02T22:37:55.562000",
+    "depth": 35,
+    "longitude": 157.7988,
+    "latitude": 50.5804
+  },
+  "imu_data_info": {
+    "duration_seconds": 10.0,
+    "sample_rate": 104,
+    "estimated_pga": 0.055999999999999994,
+    "total_samples": 1040
+  },
+  "category": "big",
+  "detection_threshold": 5.1
+}

@@ -1,0 +1,19 @@
+{
+  "earthquake_info": {
+    "id": null,
+    "magnitude": 4.4,
+    "place": "147 km SW of Santiago de Cao, Peru",
+    "time": "2025-08-05T16:31:19.912000",
+    "depth": 10,
+    "longitude": -80.3006,
+    "latitude": -8.7654
+  },
+  "imu_data_info": {
+    "duration_seconds": 10.0,
+    "sample_rate": 104,
+    "estimated_pga": 0.01,
+    "total_samples": 1040
+  },
+  "category": "small",
+  "detection_threshold": 4.0
+}

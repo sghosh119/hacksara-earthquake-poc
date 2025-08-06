@@ -1,0 +1,75 @@
+{
+  "total_earthquakes": 1567,
+  "categories": {
+    "big": {
+      "count": 303,
+      "magnitude_range": "M5.1-M6.9",
+      "examples": [
+        {
+          "magnitude": 6.9,
+          "place": "133 km SE of Petropavlovsk-Kamchatsky, Russia",
+          "time": "2025-07-29T17:09:57.929000"
+        },
+        {
+          "magnitude": 6.9,
+          "place": "Macquarie Island region",
+          "time": "2025-07-28T15:10:35.059000"
+        },
+        {
+          "magnitude": 6.8,
+          "place": "118 km E of Severo-Kuril\u2019sk, Russia",
+          "time": "2025-08-02T22:37:55.562000"
+        }
+      ]
+    },
+    "borderline": {
+      "count": 757,
+      "magnitude_range": "M4.5-M5",
+      "examples": [
+        {
+          "magnitude": 5,
+          "place": "east of the Kuril Islands",
+          "time": "2025-08-05T03:15:51.561000"
+        },
+        {
+          "magnitude": 5,
+          "place": "140 km ESE of Ozernovskiy, Russia",
+          "time": "2025-08-04T14:06:20.428000"
+        },
+        {
+          "magnitude": 5,
+          "place": "144 km SSE of Vilyuchinsk, Russia",
+          "time": "2025-08-04T04:37:31.290000"
+        }
+      ]
+    },
+    "small": {
+      "count": 507,
+      "magnitude_range": "M4-M4.4",
+      "examples": [
+        {
+          "magnitude": 4.4,
+          "place": "147 km SW of Santiago de Cao, Peru",
+          "time": "2025-08-05T16:31:19.912000"
+        },
+        {
+          "magnitude": 4.4,
+          "place": "96 km E of Petropavlovsk-Kamchatsky, Russia",
+          "time": "2025-08-05T15:18:19.515000"
+        },
+        {
+          "magnitude": 4.4,
+          "place": "292 km E of Levuka, Fiji",
+          "time": "2025-08-05T12:31:04.474000"
+        }
+      ]
+    }
+  },
+  "data_collection_time": "2025-08-06T15:49:05.680580",
+  "data_source": "USGS API",
+  "detection_thresholds": {
+    "big_earthquake_threshold": 5.1,
+    "borderline_earthquake_threshold": 4.5,
+    "small_earthquake_threshold": 4.0
+  }
+}
