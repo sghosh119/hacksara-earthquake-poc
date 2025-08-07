@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Hacksara Earthquake Detection POC Setup Script
-# This script sets up the environment and downloads sample data
+# This script sets up the environment and downloads real earthquake data
 
 set -e  # Exit on any error
 
@@ -124,9 +124,9 @@ echo "🎉 Setup completed successfully!"
 echo ""
 echo "📋 Next steps:"
 echo "   1. Activate the virtual environment: source venv/bin/activate"
-echo "   2. Run the demo: python scripts/demo_detection.py"
-echo "   3. Test with real data: python scripts/demo_detection.py --test-all-files"
-echo "   4. Generate plots: python scripts/plot_earthquakes.py"
+echo "   2. Run the demo: python scripts/demo_detection.py --full-demo"
+echo "   3. Test with real earthquake data: python scripts/demo_detection.py --test-all-files"
+echo "   4. Generate analysis plots: python scripts/demo_detection.py --create-plots"
 echo ""
 echo "📚 Documentation:"
 echo "   - README.md: Main documentation"

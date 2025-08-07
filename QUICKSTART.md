@@ -48,7 +48,6 @@ This comprehensive demo will:
 - 📥 Fetch real earthquake data from USGS API
 - 🔍 Test detection with all earthquake files
 - 📊 Create comprehensive analysis plots
-- 🧪 Test with synthetic earthquake data
 - 📈 Show detailed results and statistics
 
 ### Option B: Individual Components
@@ -61,11 +60,6 @@ python scripts/demo_detection.py --fetch-data
 #### Create Analysis Plots
 ```bash
 python scripts/demo_detection.py --create-plots
-```
-
-#### Test with Synthetic Data
-```bash
-python scripts/demo_detection.py --test-synthetic
 ```
 
 #### Test All Earthquake Files
@@ -95,15 +89,15 @@ python scripts/demo_detection.py
 ### 📊 Detection Parameters
 - **PGA Threshold**: 0.02g (initial alert)
 - **PGA Confirmation**: 0.05g (strong confirmation)
-- **STA/LTA Threshold**: 3.5
-- **Min Duration**: 3 seconds
+- **STA/LTA Threshold**: 2.5
+- **Min Duration**: 0.5 seconds
 - **Sample Rate**: 104 Hz
 
 ### 🎯 Detection Criteria
 1. **PGA Check**: Acceleration exceeds threshold
 2. **STA/LTA Check**: Signal amplitude ratio exceeds threshold
 3. **Duration Check**: Sustained shaking for minimum time
-4. **Confidence Scoring**: 0-4.5 point scale
+4. **Confidence Scoring**: 0-3 point scale
 
 ## Example Output
 
@@ -144,21 +138,6 @@ python scripts/demo_detection.py
    📍 M6.8 - 118 km E of Severo-Kuril'sk, Russia
    ✅ Saved: big_M6.8_test1_analysis.png
 
-🧪 Step 4: Testing with synthetic data...
-🧪 Testing with synthetic earthquake data
-
-📊 Testing: Small Earthquake
-   Generated 1040 samples with M0.02 earthquake
-   ✅ No earthquake detected
-
-📊 Testing: Medium Earthquake
-   Generated 1040 samples with M0.05 earthquake
-   🚨 EARTHQUAKE DETECTED!
-   Severity: moderate
-   Confidence: 3.0/4.0
-   PGA Magnitude: 0.0523g
-   Max STA/LTA: 4.15
-
 📊 Final Statistics:
    Total Detections: 5
    Last Detection: 2025-01-15 10:30:45.123456
@@ -172,7 +151,6 @@ python scripts/demo_detection.py
 - `--full-demo`: Run complete demo workflow
 - `--fetch-data`: Fetch new earthquake data from USGS API
 - `--create-plots`: Create comprehensive earthquake analysis plots
-- `--test-synthetic`: Test with synthetic earthquake data
 - `--test-all-files`: Test all earthquake data files
 - `--data-file`: Test with specific data file
 - `--log-level`: Set logging level (DEBUG, INFO, WARNING, ERROR)
