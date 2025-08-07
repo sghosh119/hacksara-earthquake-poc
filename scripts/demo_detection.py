@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Demo script for earthquake detection system.
-Tests the detection system with sample data and synthetic earthquakes.
+Tests the detection system with sample data and real earthquake data.
 """
 
 import sys
@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 from earthquake_detector import EarthquakeDetector
 from config import Settings
-from utils import setup_logging, load_sample_data, generate_synthetic_earthquake_data
+from utils import setup_logging, load_sample_data
 
 def main():
     """Main demo function."""
@@ -28,8 +28,6 @@ def main():
     parser.add_argument('--log-level', type=str, default='INFO',
                        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                        help='Logging level')
-    parser.add_argument('--test-synthetic', action='store_true',
-                       help='Test with synthetic earthquake data')
     parser.add_argument('--test-all-files', action='store_true',
                        help='Test all earthquake data files')
     parser.add_argument('--chunk-size', type=int, default=1000,
@@ -73,10 +71,6 @@ def main():
     if args.data_file:
         test_single_file(detector, args.data_file, logger)
     
-    # Test with synthetic data
-    elif args.test_synthetic:
-        test_synthetic_earthquakes(detector, logger)
-    
     # Test all earthquake files
     elif args.test_all_files:
         test_all_earthquake_files(detector, logger)
@@ -109,10 +103,6 @@ def run_full_demo(detector: EarthquakeDetector, logger: logging.Logger):
     # Step 3: Create comprehensive plots
     logger.info("\n📊 Step 3: Creating analysis plots...")
     test_create_earthquake_plots(logger)
-    
-    # Step 4: Test with synthetic data
-    logger.info("\n🧪 Step 4: Testing with synthetic data...")
-    test_synthetic_earthquakes(detector, logger)
     
     logger.info("\n🎉 Full demo workflow completed!")
 
@@ -202,37 +192,6 @@ def test_single_file(detector: EarthquakeDetector, data_file: str, logger: loggi
     
     # Display results
     display_detection_results(result, logger)
-
-def test_synthetic_earthquakes(detector: EarthquakeDetector, logger: logging.Logger):
-    """Test detection with synthetic earthquake data."""
-    logger.info("🧪 Testing with synthetic earthquake data")
-    
-    # Test different earthquake scenarios
-    scenarios = [
-        {"magnitude": 0.02, "name": "Small Earthquake"},
-        {"magnitude": 0.05, "name": "Medium Earthquake"},
-        {"magnitude": 0.08, "name": "Large Earthquake"},
-        {"magnitude": 0.12, "name": "Very Large Earthquake"}
-    ]
-    
-    for scenario in scenarios:
-        logger.info(f"\n📊 Testing: {scenario['name']}")
-        
-        # Generate synthetic data
-        synthetic_data = generate_synthetic_earthquake_data(
-            duration_seconds=10.0,
-            earthquake_start=5.0,
-            earthquake_magnitude=scenario['magnitude']
-        )
-        
-        data = synthetic_data['data']
-        logger.info(f"   Generated {len(data)} samples with M{scenario['magnitude']:.2f} earthquake")
-        
-        # Process data
-        result = detector.process_imu_data(data)
-        
-        # Display results
-        display_detection_results(result, logger)
 
 def test_all_earthquake_files(detector: EarthquakeDetector, logger: logging.Logger):
     """Test detection with all earthquake data files."""

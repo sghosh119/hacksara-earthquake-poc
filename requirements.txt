@@ -31,17 +31,5 @@ isort>=5.9.0
 jupyter>=1.0.0
 ipykernel>=6.0.0
 
-# Real-time data processing
-asyncio-mqtt>=0.11.0
-websockets>=10.0
-
-# Database (for storing detection events)
-sqlalchemy>=1.4.0
-
-# Configuration management (using standard library)
-
 # Logging
-structlog>=21.0.0
-
-# Performance monitoring
-psutil>=5.8.0 
+structlog>=21.0.0 
